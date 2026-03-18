@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS test_git_mysql 
+DEFAULT CHARACTER SET utf8mb4 
+DEFAULT COLLATE utf8mb4_general_ci;
+
+USE test_git_mysql;
+
+CREATE TABLE IF NOT EXISTS user_info (
+    id INT PRIMARY KEY AUTO_INCREMENT COMMENT '用户ID',
+    username VARCHAR(50) NOT NULL COMMENT '用户名',
+    age INT COMMENT '年龄',
+    create_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
+) COMMENT '用户信息表';
