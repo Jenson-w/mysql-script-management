@@ -8,5 +8,8 @@ CREATE TABLE IF NOT EXISTS user_info (
     id INT PRIMARY KEY AUTO_INCREMENT COMMENT '用户ID',
     username VARCHAR(50) NOT NULL COMMENT '用户名',
     age INT COMMENT '年龄',
+    phone VARCHAR(20) COMMENT '手机号',
     create_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
 ) COMMENT '用户信息表';
+
+ALTER TABLE user_info ADD COLUMN phone VARCHAR(20) COMMENT '手机号';
